@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
     <div class="panel panel-primary">
         <div class="panel-heading">Registro de Categorias</div>
 
