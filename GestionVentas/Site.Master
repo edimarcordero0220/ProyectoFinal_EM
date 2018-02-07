@@ -44,6 +44,11 @@
                                     <li><a href="/Registros/rCategorias.aspx">Categorias</a></li> 
                                      <li><a href="/Registros/rGastos.aspx">Gastos</a></li>
                                     <li><a href="/Registros/rPagos.aspx">Gastos</a></li>
+                                    <li><a href="/Registros/RVendedores.aspx">Vendedores</a><li>
+                                    <li><a href="/Registros/RVentas.aspx">Ventas</a><li> 
+                                    <li><a href="/Registros/RSubsidios.aspx">Subsidios</a><li>
+                                     <li><a href="/Consultas/CVentas.aspx">Consulta Ventas</a><li>
+
                                 </ul>
 
                             </div>

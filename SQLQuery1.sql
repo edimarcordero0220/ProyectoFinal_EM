@@ -29,4 +29,6 @@
 	Comision float,
 	Ganancia float,
 	Pendiente float,
-	Monto float)
+	Monto float);
+
+	

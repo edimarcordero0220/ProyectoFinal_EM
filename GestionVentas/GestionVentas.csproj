@@ -46,6 +46,18 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,6 +81,7 @@
     <Content Include="App_Data\GestionDeVentasDb_log.ldf">
       <DependentUpon>GestionDeVentasDb.mdf</DependentUpon>
     </Content>
+    <Content Include="Consultas\CVentas.aspx" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.css" />
@@ -87,6 +100,9 @@
     <Content Include="Registros\rCuadreVendedor.aspx" />
     <Content Include="Registros\rGastos.aspx" />
     <Content Include="Registros\rPagos.aspx" />
+    <Content Include="Registros\RSubsidios.aspx" />
+    <Content Include="Registros\RVendedores.aspx" />
+    <Content Include="Registros\RVentas.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -102,7 +118,19 @@
     <Compile Include="BLL\DetalleCuadreBLL.cs" />
     <Compile Include="BLL\GastosBLL.cs" />
     <Compile Include="BLL\PagosBLL.cs" />
+    <Compile Include="BLL\SubsidiosBLL.cs" />
+    <Compile Include="BLL\VendedoresBLL.cs" />
+    <Compile Include="BLL\VentasBLL.cs" />
+    <Compile Include="Consultas\CVentas.aspx.cs">
+      <DependentUpon>CVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CVentas.aspx.designer.cs">
+      <DependentUpon>CVentas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\GestionVentaDb.cs" />
+    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\Repositorio.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,6 +142,9 @@
     <Compile Include="Entidades\CuadreVendedorDetalle.cs" />
     <Compile Include="Entidades\Gastos.cs" />
     <Compile Include="Entidades\Pagos.cs" />
+    <Compile Include="Entidades\Subsidios.cs" />
+    <Compile Include="Entidades\Vendedores.cs" />
+    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -148,6 +179,27 @@
     <Compile Include="Registros\rPagos.aspx.designer.cs">
       <DependentUpon>rPagos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\RSubsidios.aspx.cs">
+      <DependentUpon>RSubsidios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RSubsidios.aspx.designer.cs">
+      <DependentUpon>RSubsidios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RVendedores.aspx.cs">
+      <DependentUpon>RVendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RVendedores.aspx.designer.cs">
+      <DependentUpon>RVendedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RVentas.aspx.cs">
+      <DependentUpon>RVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RVentas.aspx.designer.cs">
+      <DependentUpon>RVentas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -155,6 +207,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -205,7 +258,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Consultas\" />
     <Folder Include="Content\img\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
