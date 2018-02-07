@@ -26,9 +26,9 @@
                  <div class="form-group">
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Vendedor Id: </label>
                     <div class="col-md-1 col-sm-2 col-xs-4">
-                        <asp:DropDownList ID="VendedorDropDownList" runat="server">
-                        </asp:DropDownList>
-                       <%-- <asp:TextBox ID="VendedorIdTextBox" runat="server"  placeholder="0" class="form-control input-sm" TextMode="Number"></asp:TextBox>--%>
+                        <%--<asp:DropDownList ID="VendedorDropDownList" runat="server">
+                        </asp:DropDownList>--%>
+                        <asp:TextBox ID="VendedorIdTextBox" runat="server"  placeholder="0" class="form-control input-sm" TextMode="Number"></asp:TextBox>
                         
                     </div>
                 </div>

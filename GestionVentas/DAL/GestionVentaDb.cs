@@ -15,7 +15,7 @@ namespace GestionVentas.DAL
         }
         public virtual DbSet<Gastos> gasto { get; set; }
         public virtual DbSet<Pagos> pago { get; set; }
-        public virtual DbSet<CuadreVendedor> cuadre { get; set; }
+        public virtual DbSet<CuadresVendedores> cuadre { get; set; }
         public virtual DbSet<CuadreVendedorDetalle> detallecuadre { get; set; }
     }
 }

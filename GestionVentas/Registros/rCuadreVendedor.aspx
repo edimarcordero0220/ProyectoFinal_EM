@@ -11,7 +11,7 @@
                 <div class="form-group">
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Cuadre Id: </label>
                     <div class="col-md-1 col-sm-2 col-xs-4">
-                        <asp:TextBox ID="IdTextBox" runat="server" ReadOnly="True" placeholder="0" class="form-control input-sm"></asp:TextBox>
+                        <asp:TextBox ID="IdTextBox" runat="server"  placeholder="0" class="form-control input-sm" TextMode="Number"></asp:TextBox>
                     </div>
                     <div class="col-md-1 col-sm-2 col-xs-4">
                        
@@ -24,7 +24,7 @@
                  <div class="form-group">
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Vendedor Id: </label>
                     <div class="col-md-1 col-sm-2 col-xs-4">
-                        <asp:TextBox ID="VendedorIdTextBox" runat="server" ReadOnly="True" placeholder="0" class="form-control input-sm"></asp:TextBox>
+                        <asp:TextBox ID="VendedorIdTextBox" runat="server"  placeholder="0" class="form-control input-sm" TextMode="Number"></asp:TextBox>
                     </div>
                 </div>
 

@@ -45,6 +45,15 @@
                                      <li><a href="/Registros/rGastos.aspx">Gastos</a></li>
                                     <li><a href="/Registros/rPagos.aspx">Pagos</a></li>
                                     <li><a href="/Registros/rCuadreVendedor.aspx">Cuadres Vendedor</a></li>
+                                    <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consultas<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                            <li><a href="/Consultas/cGastos.aspx">Gastos</a></li>
+                                            <li><a href="/Consultas/cPagos.aspx">Pagos</a></li>
+                                            <li><a href="/Consultas/cCuadreVendedor.aspx">Cuadre Vendedor</a></li>
+
+                    </ul>
+                </li>
                                 </ul>
 
                             </div>

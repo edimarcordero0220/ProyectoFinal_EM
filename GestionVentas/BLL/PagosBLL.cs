@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using GestionVentas.Entidades;
 using GestionVentas.DAL;
+using System.Linq.Expressions;
 
 namespace GestionVentas.BLL
 {
@@ -61,6 +62,23 @@ namespace GestionVentas.BLL
             List<Pagos> lista = new List<Pagos>();
             GestionVentaDb db = new GestionVentaDb();
             lista = db.pago.Where(p => p.PagoId== pagoid).ToList();
+            return lista;
+        }
+        public static List<Entidades.Pagos> GetList(Expression<Func<Entidades.Pagos, bool>> criterioBusqueda)
+        {
+            using (var repositorio = new Repositorio<Pagos>())
+            {
+                return repositorio.GetList(criterioBusqueda);
+            }
+        }
+        public static List<Pagos> GetListTodo()
+        {
+            List<Pagos> lista = null;
+            using (var conn = new Repositorio<Pagos>())
+            {
+                lista = conn.GetListTodo().ToList();
+            }
+
             return lista;
         }
     }

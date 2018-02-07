@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GestionVentas.Entidades
 {
-    public class CuadreVendedor
+    public class CuadresVendedores
     {
         [Key]
         public int CuadreId  { get; set; }

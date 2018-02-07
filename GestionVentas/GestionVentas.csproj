@@ -69,6 +69,9 @@
     <Content Include="App_Data\GestionDeVentasDb_log.ldf">
       <DependentUpon>GestionDeVentasDb.mdf</DependentUpon>
     </Content>
+    <Content Include="Consultas\cCuadreVendedor.aspx" />
+    <Content Include="Consultas\cGastos.aspx" />
+    <Content Include="Consultas\cPagos.aspx" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.css" />
@@ -98,11 +101,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\CuadreBLL.cs" />
+    <Compile Include="BLL\CuadreVendedorBLL.cs" />
     <Compile Include="BLL\DetalleCuadreBLL.cs" />
     <Compile Include="BLL\GastosBLL.cs" />
     <Compile Include="BLL\PagosBLL.cs" />
+    <Compile Include="Consultas\cCuadreVendedor.aspx.cs">
+      <DependentUpon>cCuadreVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCuadreVendedor.aspx.designer.cs">
+      <DependentUpon>cCuadreVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cGastos.aspx.cs">
+      <DependentUpon>cGastos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cGastos.aspx.designer.cs">
+      <DependentUpon>cGastos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cPagos.aspx.cs">
+      <DependentUpon>cPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cPagos.aspx.designer.cs">
+      <DependentUpon>cPagos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\GestionVentaDb.cs" />
+    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\Repositorio.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,7 +136,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Entidades\CuadreVendedor.cs" />
+    <Compile Include="Entidades\CuadresVendedores.cs" />
     <Compile Include="Entidades\CuadreVendedorDetalle.cs" />
     <Compile Include="Entidades\Gastos.cs" />
     <Compile Include="Entidades\Pagos.cs" />
@@ -206,7 +232,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Consultas\" />
     <Folder Include="Content\img\" />
     <Folder Include="Reportes\" />
   </ItemGroup>

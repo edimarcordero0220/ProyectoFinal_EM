@@ -13,9 +13,9 @@ namespace GestionVentas.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.FechaTextBox.Text = string.Format("{0:G}", DateTime.Now);
+            FechaTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
-        public void LlenarClase(CuadreVendedor cv)
+        public void LlenarClase(CuadresVendedores cv)
         {
 
             cv.Fecha = Convert.ToDateTime(FechaTextBox.Text);
@@ -42,9 +42,9 @@ namespace GestionVentas.Registros
             }
             else
             {
-                Entidades.CuadreVendedor cv = new Entidades.CuadreVendedor();
+                Entidades.CuadresVendedores cv = new Entidades.CuadresVendedores();
                 LlenarClase(cv);
-                CuadreBLL.Insertar(cv);
+                CuadreVendedorBLL.Insertar(cv);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Proceso Completado');</script>");
                 Limpiar();
             }
@@ -56,9 +56,9 @@ namespace GestionVentas.Registros
             int.TryParse(texto, out numero);
             return numero;
         }
-        public void BuscarCuadre(Entidades.CuadreVendedor cv)
+        public void BuscarCuadre(Entidades.CuadresVendedores cv)
         {
-            if (CuadreBLL.Buscar(String(IdTextBox.Text)) == null)
+            if (CuadreVendedorBLL.Buscar(String(IdTextBox.Text)) == null)
             {
                 base.Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('No Existe');</script>");
 
@@ -89,7 +89,7 @@ namespace GestionVentas.Registros
             }
             else
             {
-                BuscarCuadre(CuadreBLL.Buscar(String(IdTextBox.Text)));
+                BuscarCuadre(CuadreVendedorBLL.Buscar(String(IdTextBox.Text)));
             }
         }
 
@@ -101,13 +101,13 @@ namespace GestionVentas.Registros
             }
             else
             {
-                if (CuadreBLL.Buscar(String(IdTextBox.Text)) == null)
+                if (CuadreVendedorBLL.Buscar(String(IdTextBox.Text)) == null)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('No existe ');</script>");
                 }
                 else
                 {
-                    CuadreBLL.Eliminar(String(IdTextBox.Text));
+                    CuadreVendedorBLL.Eliminar(String(IdTextBox.Text));
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Proceso Completado');</script>");
                 }
 

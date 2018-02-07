@@ -13,7 +13,7 @@ namespace GestionVentas.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.FechaTextBox.Text = string.Format("{0:G}", DateTime.Now);
+            FechaTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
         public void LlenarDropDownList()
@@ -26,9 +26,9 @@ namespace GestionVentas.Registros
 
         public void LlenarClase(Gastos g)
         {
-           
-            g.Fecha = Convert.ToDateTime(FechaTextBox.Text);
-            //g.VendedorId = Utilidades.TOINT(VendedorIdTextBox.Text);
+
+            g.Fecha = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
+            g.VendedorId = Utilidades.TOINT(VendedorIdTextBox.Text);
             g.Concepto = ConceptoTextBox.Text;
             g.Monto = Utilidades.TOINT(MontoTextBox.Text);
 
@@ -37,7 +37,7 @@ namespace GestionVentas.Registros
         public void Limpiar()
         {
             IdTextBox.Text = "";
-            //VendedorIdTextBox.Text = "";
+            VendedorIdTextBox.Text = "";
             ConceptoTextBox.Text = "";
             MontoTextBox.Text = "";
             
@@ -79,7 +79,7 @@ namespace GestionVentas.Registros
             else
             {
 
-                //VendedorIdTextBox.Text = Convert.ToString(g.VendedorId);
+                VendedorIdTextBox.Text = Convert.ToString(g.VendedorId);
                 ConceptoTextBox.Text = g.Concepto;
                 g.Fecha = Convert.ToDateTime(FechaTextBox.Text);
                 MontoTextBox.Text = Convert.ToString(g.Monto);

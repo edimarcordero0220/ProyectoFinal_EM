@@ -13,7 +13,7 @@ namespace GestionVentas.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.FechaTextBox.Text = string.Format("{0:G}", DateTime.Now);
+            FechaTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
         public void LlenarClase(Pagos p)
         {
