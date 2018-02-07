@@ -123,5 +123,10 @@ namespace GestionVentas.Consultas
                 ValidarBuscar();
             }
         }
+
+        protected void imprimirButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reportes/GastosReportes.aspx");
+        }
     }
 }
