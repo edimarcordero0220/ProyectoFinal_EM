@@ -14,5 +14,13 @@ namespace GestionVentas.Entidades
         public DateTime Fecha { get; set; }
         public string Concepto { get; set; }
         public int Monto { get; set; }
+
+        public virtual List<CuadresVendedorDetalle> detalle { get; set; }
+
+        public CuadresVendedores()
+        {
+            this.detalle = new List<CuadresVendedorDetalle>();
+        }
+        public List<CuadresVendedorDetalle> Detalle;
     }
 }

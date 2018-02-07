@@ -19,5 +19,11 @@ namespace GestionVentas.Entidades
         public int Pagos { get; set; }
         public int Comision { get; set; }
         public int Ganancia { get; set; }
+
+        public virtual List<CuadresVendedores> cuadrevendedor { get; set; }
+        public CuadresVendedorDetalle()
+        {
+            this.cuadrevendedor = new List<CuadresVendedores>();
+        }
     }
 }

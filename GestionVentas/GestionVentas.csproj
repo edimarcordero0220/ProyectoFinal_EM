@@ -125,17 +125,6 @@
     <Content Include="GestionVentaDbDataSet.xsc">
       <DependentUpon>GestionVentaDbDataSet.xsd</DependentUpon>
     </Content>
-    <Content Include="GastosDataSet.xsc">
-      <DependentUpon>GastosDataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="GastosDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GastosDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="GastosDataSet.xss">
-      <DependentUpon>GastosDataSet.xsd</DependentUpon>
-    </Content>
     <None Include="GestionVentaDbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>GestionVentaDbDataSet.Designer.cs</LastGenOutput>
@@ -217,11 +206,6 @@
     <Compile Include="Entidades\CuadresVendedores.cs" />
     <Compile Include="Entidades\Gastos.cs" />
     <Compile Include="Entidades\Pagos.cs" />
-    <Compile Include="GastosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GastosDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GestionVentaDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
