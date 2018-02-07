@@ -15,7 +15,7 @@ namespace GestionVentas.BLL
             try
             {
                 GestionVentaDb db = new GestionVentaDb();
-                db.cuadre.Add(cv);
+                db.Cuadre.Add(cv);
                 db.SaveChanges();
                 db.Dispose();
             }
@@ -31,7 +31,7 @@ namespace GestionVentas.BLL
         {
             List<CuadresVendedores> lista = new List<CuadresVendedores>();
             GestionVentaDb db = new GestionVentaDb();
-            lista = db.cuadre.ToList();
+            lista = db.Cuadre.ToList();
             return lista;
 
         }
@@ -39,21 +39,21 @@ namespace GestionVentas.BLL
         public static void Eliminar(int v)
         {
             GestionVentaDb db = new GestionVentaDb();
-            CuadresVendedores cl = db.cuadre.Find(v);
+            CuadresVendedores cl = db.Cuadre.Find(v);
 
-            db.cuadre.Remove(cl);
+            db.Cuadre.Remove(cl);
             db.SaveChanges();
         }
         public static CuadresVendedores Buscar(int Id)
         {
             GestionVentaDb db = new GestionVentaDb();
-            return db.cuadre.Find(Id);
+            return db.Cuadre.Find(Id);
         }
         public static List<CuadresVendedores> GetListaVendedor(int tmp)
         {
             List<CuadresVendedores> lista = new List<CuadresVendedores>();
             GestionVentaDb db = new GestionVentaDb();
-            lista = db.cuadre.Where(p => p.VendedorId == tmp).ToList();
+            lista = db.Cuadre.Where(p => p.VendedorId == tmp).ToList();
             return lista;
         }
 
@@ -61,7 +61,7 @@ namespace GestionVentas.BLL
         {
             List<CuadresVendedores> lista = new List<CuadresVendedores>();
             GestionVentaDb db = new GestionVentaDb();
-            lista = db.cuadre.Where(p => p.CuadreId == cuadreid).ToList();
+            lista = db.Cuadre.Where(p => p.CuadreId == cuadreid).ToList();
             return lista;
         }
         public static List<Entidades.CuadresVendedores> GetList(Expression<Func<Entidades.CuadresVendedores, bool>> criterioBusqueda)
