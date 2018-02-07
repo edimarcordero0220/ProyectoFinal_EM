@@ -7,7 +7,6 @@ namespace GestionVentas
 {
     public class Utilidades
     {
-
         public static int TOINT(string nombre)
         {
             int.TryParse(nombre, out int numero);
