@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
      <div class="panel panel-primary">
-        <div class="panel-heading">Registro de Pagos</div>
+        <div class="panel-heading">Registro de Cuadres de Vendedor</div>
 
         <div class="panel-body">
             <div class="form-horizontal col-md-12" role="form">
@@ -58,5 +58,16 @@
                 </div>
 
 
-                </div></div></div>
+                </div>
+               <div class="panel-footer">
+            <div class="text-center">
+                <div class="form-group" style="display: inline-block">
+                    <asp:Button class="btn btn-info" ID="LimpiarCampos" runat="server" CausesValidation="False" Text="Limpiar"  TabIndex="1" />
+                    <asp:Button class="btn btn-success" ID="GuardarButton" runat="server" CausesValidation="True" Text="Guardar"  TabIndex="2" />
+                   <%-- <asp:Button class="btn btn-primary" ID="ImprimirButton" runat="server" CausesValidation="True" Text="Imprimir"  TabIndex="3" />--%>
+                    <asp:Button class="btn btn-danger" ID="AnularButton" runat="server" CausesValidation="False" Text="Eliminar" TabIndex="4" />
+                </div>
+            </div>
+        </div>
+        </div></div>
 </asp:Content>

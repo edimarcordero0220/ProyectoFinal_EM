@@ -26,9 +26,9 @@ namespace GestionVentas.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Edimar Cordero\\Sour" +
-            "ce\\Repos\\PF-Ap2-2018-01\\GestionVentas\\App_Data\\GestionVentaDb.mdf\";Integrated Se" +
-            "curity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Edimar Cordero\\Desk" +
+            "top\\PF-Ap2-2018-01-master\\GestionVentas\\App_Data\\GestionVentaDb.mdf\";Integrated " +
+            "Security=True")]
         public string ConStr {
             get {
                 return ((string)(this["ConStr"]));

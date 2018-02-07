@@ -13,6 +13,6 @@ namespace GestionVentas.Entidades
         public int VendedorId { get; set; }
         public DateTime Fecha { get; set; }
         public string Concepto { get; set; }
-        public decimal Monto { get; set; }
+        public int Monto { get; set; }
     }
 }
