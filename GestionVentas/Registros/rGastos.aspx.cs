@@ -15,11 +15,20 @@ namespace GestionVentas.Registros
         {
             this.FechaTextBox.Text = string.Format("{0:G}", DateTime.Now);
         }
+
+        public void LlenarDropDownList()
+        {
+            
+
+          
+        }
+
+
         public void LlenarClase(Gastos g)
         {
            
             g.Fecha = Convert.ToDateTime(FechaTextBox.Text);
-            g.VendedorId = Utilidades.TOINT(VendedorIdTextBox.Text);
+            //g.VendedorId = Utilidades.TOINT(VendedorIdTextBox.Text);
             g.Concepto = ConceptoTextBox.Text;
             g.Monto = Utilidades.TOINT(MontoTextBox.Text);
 
@@ -28,7 +37,7 @@ namespace GestionVentas.Registros
         public void Limpiar()
         {
             IdTextBox.Text = "";
-            VendedorIdTextBox.Text = "";
+            //VendedorIdTextBox.Text = "";
             ConceptoTextBox.Text = "";
             MontoTextBox.Text = "";
             
@@ -40,11 +49,18 @@ namespace GestionVentas.Registros
 
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
-            Entidades.Gastos gasto = new Entidades.Gastos();
-            LlenarClase(gasto);
-            GastosBLL.Insertar(gasto);
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Proceso Completado');</script>");
-            Limpiar();
+            if ( ConceptoTextBox.Text == "" || MontoTextBox.Text == "")
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debes Llenar Todos los Campos');</script>");
+            }
+            else
+            {
+                Entidades.Gastos gasto = new Entidades.Gastos();
+                LlenarClase(gasto);
+                GastosBLL.Insertar(gasto);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Proceso Completado');</script>");
+                Limpiar();
+            }
         }
         public int String(string texto)
         {
@@ -63,7 +79,7 @@ namespace GestionVentas.Registros
             else
             {
 
-                VendedorIdTextBox.Text = Convert.ToString(g.VendedorId);
+                //VendedorIdTextBox.Text = Convert.ToString(g.VendedorId);
                 ConceptoTextBox.Text = g.Concepto;
                 g.Fecha = Convert.ToDateTime(FechaTextBox.Text);
                 MontoTextBox.Text = Convert.ToString(g.Monto);
