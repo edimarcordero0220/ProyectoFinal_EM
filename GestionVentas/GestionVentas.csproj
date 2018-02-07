@@ -86,6 +86,7 @@
     <Content Include="Content\toastr\toastr.min.css" />
     <Content Include="Content\toastr\toastr.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="Registros\rDetalleCuadreVendedor.aspx" />
     <Content Include="Registros\rCategorias.aspx" />
     <Content Include="Registros\rCuadreVendedor.aspx" />
     <Content Include="Registros\rGastos.aspx" />
@@ -136,8 +137,8 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\CuadresVendedorDetalle.cs" />
     <Compile Include="Entidades\CuadresVendedores.cs" />
-    <Compile Include="Entidades\CuadreVendedorDetalle.cs" />
     <Compile Include="Entidades\Gastos.cs" />
     <Compile Include="Entidades\Pagos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,6 +146,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rDetalleCuadreVendedor.aspx.cs">
+      <DependentUpon>rDetalleCuadreVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rDetalleCuadreVendedor.aspx.designer.cs">
+      <DependentUpon>rDetalleCuadreVendedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rCategorias.aspx.cs">
       <DependentUpon>rCategorias.aspx</DependentUpon>

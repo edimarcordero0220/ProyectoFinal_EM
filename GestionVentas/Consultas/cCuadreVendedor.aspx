@@ -19,9 +19,9 @@
                     <asp:ListItem>GastosID</asp:ListItem>
                     <asp:ListItem>Vendedor Id</asp:ListItem>
                 </asp:DropDownList>             
-                <asp:TextBox ID="BuscarTextBox" runat="server" Width="188px"></asp:TextBox>
-                <asp:Button ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
-                </div>
+                <asp:TextBox ID="BuscarTextBox" runat="server" Width="151px"></asp:TextBox>
+                <asp:Button ID="BuscarButton" runat="server"  Text="Buscar" OnClick="BuscarButton_Click" Width="69px" />
+                &nbsp;</div>
                  <div class="form-group">
                   <asp:Label ID="Label2" runat="server" Text="Desde:"></asp:Label> 
                   <asp:TextBox ID="DesdeTextBox" runat="server"></asp:TextBox>
