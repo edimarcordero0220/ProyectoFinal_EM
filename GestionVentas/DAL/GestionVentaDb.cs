@@ -20,6 +20,8 @@ namespace GestionVentas.DAL
         public virtual DbSet<Vendedores> vendedores { get; set; }
         public virtual DbSet<Ventas> ventas { get; set; }
         public virtual DbSet<Subsidios> subsidios { get; set; }
+        public virtual DbSet<Categorias> Categorias { get; set; }
+        public virtual DbSet<DetalleVendedores> DetalleVendedores { get; set; }
         
     }
 }

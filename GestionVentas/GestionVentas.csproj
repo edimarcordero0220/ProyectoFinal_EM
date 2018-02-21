@@ -93,6 +93,8 @@
     <Content Include="Consultas\cCuadreVendedor.aspx" />
     <Content Include="Consultas\cGastos.aspx" />
     <Content Include="Consultas\cPagos.aspx" />
+    <Content Include="Consultas\CSubsidios.aspx" />
+    <Content Include="Consultas\CVendedores.aspx" />
     <Content Include="Consultas\CVentas.aspx" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
@@ -108,9 +110,10 @@
     <Content Include="Content\toastr\toastr.min.css" />
     <Content Include="Content\toastr\toastr.min.js" />
     <Content Include="Default.aspx" />
-    <Content Include="Registros\rDetalleCuadreVendedor.aspx" />
     <Content Include="Registros\rCategorias.aspx" />
+    <Content Include="Registros\rDetalleCuadreVendedor.aspx" />
     <Content Include="Registros\rCuadreVendedor.aspx" />
+    <Content Include="Registros\RDetalleVendedores.aspx" />
     <Content Include="Registros\rGastos.aspx" />
     <Content Include="Registros\rPagos.aspx" />
     <Content Include="Registros\RSubsidios.aspx" />
@@ -147,23 +150,13 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CategoriasBLL.cs" />
     <Compile Include="BLL\CuadreVendedorBLL.cs" />
     <Compile Include="BLL\DetalleCuadreBLL.cs" />
+    <Compile Include="BLL\DetalleVendedoresBLL.cs" />
     <Compile Include="BLL\GastosBLL.cs" />
     <Compile Include="BLL\PagosBLL.cs" />
     <Compile Include="Consultas\cCuadreVendedor.aspx.cs">
@@ -190,6 +183,20 @@
     <Compile Include="BLL\SubsidiosBLL.cs" />
     <Compile Include="BLL\VendedoresBLL.cs" />
     <Compile Include="BLL\VentasBLL.cs" />
+    <Compile Include="Consultas\CSubsidios.aspx.cs">
+      <DependentUpon>CSubsidios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSubsidios.aspx.designer.cs">
+      <DependentUpon>CSubsidios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CVendedores.aspx.cs">
+      <DependentUpon>CVendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CVendedores.aspx.designer.cs">
+      <DependentUpon>CVendedores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\CVentas.aspx.cs">
       <DependentUpon>CVentas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -207,8 +214,10 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\CuadresVendedorDetalles.cs" />
     <Compile Include="Entidades\CuadresVendedores.cs" />
+    <Compile Include="Entidades\DetalleVendedores.cs" />
     <Compile Include="Entidades\Gastos.cs" />
     <Compile Include="Entidades\Pagos.cs" />
     <Compile Include="GestionVentaDbDataSet.Designer.cs">
@@ -225,13 +234,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Registros\rDetalleCuadreVendedor.aspx.cs">
-      <DependentUpon>rDetalleCuadreVendedor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registros\rDetalleCuadreVendedor.aspx.designer.cs">
-      <DependentUpon>rDetalleCuadreVendedor.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Registros\rCategorias.aspx.cs">
       <DependentUpon>rCategorias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,12 +241,26 @@
     <Compile Include="Registros\rCategorias.aspx.designer.cs">
       <DependentUpon>rCategorias.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rDetalleCuadreVendedor.aspx.cs">
+      <DependentUpon>rDetalleCuadreVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rDetalleCuadreVendedor.aspx.designer.cs">
+      <DependentUpon>rDetalleCuadreVendedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\rCuadreVendedor.aspx.cs">
       <DependentUpon>rCuadreVendedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Registros\rCuadreVendedor.aspx.designer.cs">
       <DependentUpon>rCuadreVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RDetalleVendedores.aspx.cs">
+      <DependentUpon>RDetalleVendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RDetalleVendedores.aspx.designer.cs">
+      <DependentUpon>RDetalleVendedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rGastos.aspx.cs">
       <DependentUpon>rGastos.aspx</DependentUpon>
@@ -260,6 +276,13 @@
     <Compile Include="Registros\rPagos.aspx.designer.cs">
       <DependentUpon>rPagos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\RVendedores.aspx.cs">
+      <DependentUpon>RVendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RVendedores.aspx.designer.cs">
+      <DependentUpon>RVendedores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\GestionDeVentas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -271,13 +294,6 @@
     </Compile>
     <Compile Include="Registros\RSubsidios.aspx.designer.cs">
       <DependentUpon>RSubsidios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Registros\RVendedores.aspx.cs">
-      <DependentUpon>RVendedores.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registros\RVendedores.aspx.designer.cs">
-      <DependentUpon>RVendedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\RVentas.aspx.cs">
       <DependentUpon>RVentas.aspx</DependentUpon>

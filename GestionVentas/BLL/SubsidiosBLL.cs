@@ -72,5 +72,17 @@ namespace GestionVentas.BLL
 
             return lista;
         }
+        public static List<Subsidios> ListarTodo()
+        {
+            List<Subsidios> lista = null;
+            using (var conn = new Repositorio<Subsidios>())
+            {
+                lista = conn.GetListTodo().ToList();
+            }
+
+            return lista;
+        }
+
+
     }
 }

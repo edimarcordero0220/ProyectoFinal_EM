@@ -5,6 +5,7 @@ using System.Web;
 using GestionVentas.DAL;
 using GestionVentas.Entidades;
 using System.Data;
+using System.Linq.Expressions;
 
 namespace GestionVentas.BLL
 {
@@ -55,7 +56,36 @@ namespace GestionVentas.BLL
             lista = db.vendedores.Where(a => a.Nombres == tmp).ToList();
             return lista;
         }
-     
+        public static List<Vendedores> GetList(Expression<Func<Vendedores, bool>> criterioBusqueda)
+        {
+            using (var repositorio = new Repositorio<Vendedores>())
+            {
+                return repositorio.GetList(criterioBusqueda);
+            }
+        }
+
+        public static List<Vendedores> GetListTodo()
+        {
+            List<Vendedores> lista = null;
+            using (var conn = new Repositorio<Vendedores>())
+            {
+                lista = conn.GetListTodo().ToList();
+            }
+
+            return lista;
+        }
+        public static List<Vendedores> ListarTodo()
+        {
+            List<Vendedores> lista = null;
+            using (var conn = new Repositorio<Vendedores>())
+            {
+                lista = conn.GetListTodo().ToList();
+            }
+
+            return lista;
+        }
+
+
 
     }
 }

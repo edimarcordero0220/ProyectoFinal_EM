@@ -22,31 +22,22 @@ namespace GestionVentas.Registros {
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
         
         /// <summary>
-        /// BusquedaButton control.
+        /// BuscarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BusquedaButton;
+        protected global::System.Web.UI.WebControls.Button BuscarButton;
         
         /// <summary>
-        /// NombreTextBox control.
+        /// NombresTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
-        
-        /// <summary>
-        /// RFVNombre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVNombre;
+        protected global::System.Web.UI.WebControls.TextBox NombresTextBox;
         
         /// <summary>
         /// DescripcionTextBox control.
@@ -58,31 +49,22 @@ namespace GestionVentas.Registros {
         protected global::System.Web.UI.WebControls.TextBox DescripcionTextBox;
         
         /// <summary>
-        /// RFVDescripcion control.
+        /// MjeInicialTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDescripcion;
+        protected global::System.Web.UI.WebControls.TextBox MjeInicialTextBox;
         
         /// <summary>
-        /// MjITextBox control.
+        /// MjeFinalTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MjITextBox;
-        
-        /// <summary>
-        /// MjFTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MjFTextBox;
+        protected global::System.Web.UI.WebControls.TextBox MjeFinalTextBox;
         
         /// <summary>
         /// Pct1TextBox control.
@@ -139,33 +121,6 @@ namespace GestionVentas.Registros {
         protected global::System.Web.UI.WebControls.TextBox LimiteVTextBox;
         
         /// <summary>
-        /// RFVLimiteV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVLimiteV;
-        
-        /// <summary>
-        /// SumaryValidation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary SumaryValidation;
-        
-        /// <summary>
-        /// ErrorLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLabel;
-        
-        /// <summary>
         /// LimpiarCampos control.
         /// </summary>
         /// <remarks>
@@ -175,13 +130,13 @@ namespace GestionVentas.Registros {
         protected global::System.Web.UI.WebControls.Button LimpiarCampos;
         
         /// <summary>
-        /// GuardarButton control.
+        /// ButtonGuardar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarButton;
+        protected global::System.Web.UI.WebControls.Button ButtonGuardar;
         
         /// <summary>
         /// ImprimirButton control.
