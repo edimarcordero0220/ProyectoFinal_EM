@@ -1,5 +1,5 @@
-﻿alter table Pagos
+﻿ alter table Pagos
   drop column Monto;
 
   alter table Pagos
-  add Monto int;
+  add Monto int not null default('');

@@ -7,7 +7,7 @@
 
         <div class="panel-body">
             <div class="form-horizontal col-md-12" role="form">
-                 <%-- Input ID--%>
+                 <%-- <asp:LinkButton ID="BusquedaButton" CssClass="btn btn-info btn-block btn-md" data-toggle="modal" data-target="#myModal" CausesValidation="False" runat="server" Text="<span class='glyphicon glyphicon-search'></span>" />--%>
                 <div class="form-group">
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Cuadre Id: </label>
                     <div class="col-md-1 col-sm-2 col-xs-4">
@@ -16,20 +16,32 @@
                     <div class="col-md-1 col-sm-2 col-xs-4">
                        
                         <asp:Button ID="BuscarButton" CssClass="btn btn-info btn-block btn-md" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
-                       <%-- <asp:LinkButton ID="BusquedaButton" CssClass="btn btn-info btn-block btn-md" data-toggle="modal" data-target="#myModal" CausesValidation="False" runat="server" Text="<span class='glyphicon glyphicon-search'></span>" />--%>
+                        <%-- Input VendedorID--%>
                     </div>
                 </div>
 
-               <%-- Input VendedorID--%>
+               <%--  Fecha--%>
                  <div class="form-group">
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Vendedor Id: </label>
                     <div class="col-md-1 col-sm-2 col-xs-4">
+                      
                         <asp:TextBox ID="VendedorIdTextBox" runat="server"  placeholder="0" class="form-control input-sm" TextMode="Number"></asp:TextBox>
+                       
+                         
                     </div>
+                     <div class="col-md-1 col-sm-2 col-xs-4">
+                          
+                          <asp:TextBox ID="NombreVendedorTextBox" runat="server"  class="form-control input-sm"></asp:TextBox>
+                         </div>
+                     <div class="col-md-1 col-sm-2 col-xs-4">
+                       <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+                         
+                         </div>
                 </div>
 
-              <%--  Fecha--%>
+              <%--  Input Concepto--%>
                 <div class="form-group">
+                    
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Fecha: </label>
                     <div class="col-md-1 col-sm-2 col-xs-4"> 
                         <asp:TextBox ID="FechaTextBox" runat="server"  class="form-control input-sm"></asp:TextBox>
@@ -37,7 +49,7 @@
                     
                 </div>
 
-              <%--  Input Concepto--%>
+              <%--  Input Monto--%>
 
                 <div class="form-group">
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Concepto: </label>
@@ -47,7 +59,7 @@
                     
                 </div>
 
-              <%--  Input Monto--%>
+              <%-- <asp:Button class="btn btn-primary" ID="ImprimirButton" runat="server" CausesValidation="True" Text="Imprimir"  TabIndex="3" />--%>
 
                 <div class="form-group">
                     <label for="IdTextBox" class="col-md-3 control-label input-sm">Monto: </label>

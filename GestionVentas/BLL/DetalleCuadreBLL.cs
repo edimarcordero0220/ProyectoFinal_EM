@@ -10,7 +10,7 @@ namespace GestionVentas.BLL
 {
     public class DetalleCuadreBLL
     {
-        public static void Insertar(CuadresVendedorDetalle cd)
+        public static void Insertar(CuadresVendedorDetalles cd)
         {
             try
             {
@@ -27,9 +27,9 @@ namespace GestionVentas.BLL
         }
 
 
-        public static List<CuadresVendedorDetalle> GetLista()
+        public static List<CuadresVendedorDetalles> GetLista()
         {
-            List<CuadresVendedorDetalle> lista = new List<CuadresVendedorDetalle>();
+            List<CuadresVendedorDetalles> lista = new List<CuadresVendedorDetalles>();
             GestionVentaDb db = new GestionVentaDb();
             lista = db.detalle.ToList();
             return lista;
@@ -39,34 +39,34 @@ namespace GestionVentas.BLL
         public static void Eliminar(int v)
         {
             GestionVentaDb db = new GestionVentaDb();
-            CuadresVendedorDetalle cl = db.detalle.Find(v);
+            CuadresVendedorDetalles cl = db.detalle.Find(v);
 
             db.detalle.Remove(cl);
             db.SaveChanges();
         }
-        public static CuadresVendedorDetalle Buscar(int Id)
+        public static CuadresVendedorDetalles Buscar(int Id)
         {
             GestionVentaDb db = new GestionVentaDb();
             return db.detalle.Find(Id);
         }
-        public static List<CuadresVendedorDetalle> GetListaCuadre(int tmp)
+        public static List<CuadresVendedorDetalles> GetListaCuadre(int tmp)
         {
-            List<CuadresVendedorDetalle> lista = new List<CuadresVendedorDetalle>();
+            List<CuadresVendedorDetalles> lista = new List<CuadresVendedorDetalles>();
             GestionVentaDb db = new GestionVentaDb();
             lista = db.detalle.Where(p => p.CuadreId == tmp).ToList();
             return lista;
         }
-        public static List<Entidades.CuadresVendedorDetalle> GetList(Expression<Func<Entidades.CuadresVendedorDetalle, bool>> criterioBusqueda)
+        public static List<Entidades.CuadresVendedorDetalles> GetList(Expression<Func<Entidades.CuadresVendedorDetalles, bool>> criterioBusqueda)
         {
-            using (var repositorio = new Repositorio<CuadresVendedorDetalle>())
+            using (var repositorio = new Repositorio<CuadresVendedorDetalles>())
             {
                 return repositorio.GetList(criterioBusqueda);
             }
         }
-        public static List<CuadresVendedorDetalle> GetListTodo()
+        public static List<CuadresVendedorDetalles> GetListTodo()
         {
-            List<CuadresVendedorDetalle> lista = null;
-            using (var conn = new Repositorio<CuadresVendedorDetalle>())
+            List<CuadresVendedorDetalles> lista = null;
+            using (var conn = new Repositorio<CuadresVendedorDetalles>())
             {
                 lista = conn.GetListTodo().ToList();
             }

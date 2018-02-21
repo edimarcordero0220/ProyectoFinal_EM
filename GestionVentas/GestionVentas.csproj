@@ -90,10 +90,6 @@
     <Content Include="App_Data\GestionDeVentasDb_log.ldf">
       <DependentUpon>GestionDeVentasDb.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\GestionVentaDb.mdf" />
-    <Content Include="App_Data\GestionVentaDb_log.ldf">
-      <DependentUpon>GestionVentaDb.mdf</DependentUpon>
-    </Content>
     <Content Include="Consultas\cCuadreVendedor.aspx" />
     <Content Include="Consultas\cGastos.aspx" />
     <Content Include="Consultas\cPagos.aspx" />
@@ -211,7 +207,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Entidades\CuadresVendedorDetalle.cs" />
+    <Compile Include="Entidades\CuadresVendedorDetalles.cs" />
     <Compile Include="Entidades\CuadresVendedores.cs" />
     <Compile Include="Entidades\Gastos.cs" />
     <Compile Include="Entidades\Pagos.cs" />

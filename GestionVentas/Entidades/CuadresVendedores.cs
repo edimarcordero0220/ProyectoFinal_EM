@@ -15,12 +15,12 @@ namespace GestionVentas.Entidades
         public string Concepto { get; set; }
         public int Monto { get; set; }
 
-        public virtual List<CuadresVendedorDetalle> detalle { get; set; }
+        public virtual List<CuadresVendedorDetalles> detalle { get; set; }
 
         public CuadresVendedores()
         {
-            this.detalle = new List<CuadresVendedorDetalle>();
+            this.detalle = new List<CuadresVendedorDetalles>();
         }
-        public List<CuadresVendedorDetalle> Detalle;
+        public List<CuadresVendedorDetalles> Detalle;
     }
 }

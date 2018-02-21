@@ -6,14 +6,19 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using GestionVentas.BLL;
 using GestionVentas.Entidades;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace GestionVentas.Registros
 {
     public partial class rCuadreVendedor : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             FechaTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+          
         }
         public void LlenarClase(CuadresVendedores cv)
         {
@@ -112,6 +117,35 @@ namespace GestionVentas.Registros
                 }
 
             }
+        }
+        public void BuscarVwndedor(Vendedores v)
+        {
+            if (VendedoresBLL.Buscar(String(VendedorIdTextBox.Text)) == null)
+            {
+                base.Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('No Existe');</script>");
+
+
+            }
+            else
+            {
+                IdTextBox.Text = v.VendedoresId.ToString();
+                NombreVendedorTextBox.Text = v.Nombres;
+            }
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (VendedorIdTextBox.Text == "")
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debes Llenar El Campo Disco ID');</script>");
+            }
+            else
+            {
+
+                BuscarVwndedor(VendedoresBLL.Buscar(String(VendedorIdTextBox.Text)));
+
+
+            }
+
         }
     }
 }

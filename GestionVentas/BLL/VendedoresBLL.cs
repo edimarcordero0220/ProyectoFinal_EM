@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using GestionVentas.DAL;
 using GestionVentas.Entidades;
+using System.Data;
 
 namespace GestionVentas.BLL
 {
@@ -44,7 +45,7 @@ namespace GestionVentas.BLL
         {
             List<Vendedores> lista = new List<Vendedores>();
             GestionVentaDb db = new GestionVentaDb();
-            lista = db.vendedores.Where(a => a.VendedorId == tmp).ToList();
+            lista = db.vendedores.Where(a => a.VendedoresId == tmp).ToList();
             return lista;
         }
         public static List<Vendedores> GetContrasena(string tmp)
@@ -54,6 +55,7 @@ namespace GestionVentas.BLL
             lista = db.vendedores.Where(a => a.Nombres == tmp).ToList();
             return lista;
         }
+     
 
     }
 }

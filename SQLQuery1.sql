@@ -1,34 +1,11 @@
-﻿CREATE TABLE Gastos (
-	GastoId int primary key identity,	
-	VendedorId int,	
-	Fecha datetime,
-	Concepto varchar(100),
-	Monto float)
-
-	CREATE TABLE Pagos (
-	PagoId int primary key identity,	
-	VendedorId int,	
-	Fecha datetime,
-	Concepto varchar(100),
-	Monto float)
-
-	CREATE TABLE CuadresVendedor (
-	CuadreId int primary key identity,	
-	VendedorId int,	
-	Fecha datetime,
-	Concepto varchar(100),
-	Monto float)
-
-	CREATE TABLE CuadresVendedorDetalle (
+﻿CREATE TABLE CuadresVendedorDetalles (
 	Id int primary key identity,
 	CuadreId int,
-	Vendido float,
-	Subsidios float,
-	Gastos float,
-	Pagos float,
-	Comision float,
-	Ganancia float,
-	Pendiente float,
-	Monto float);
-
-	
+	Vendido int,
+	Subsidios int,
+	Gastos int,
+	Pagos int,
+	Comision int,
+	Ganancia int,
+	Pendiente int,
+	Monto int)

@@ -9,7 +9,7 @@ namespace GestionVentas.Entidades
     public class Vendedores
     {
         [Key]
-        public int VendedorId { get; set; }
+        public int VendedoresId { get; set; }
         public string Nombres { get; set; }
         public string Descripcion { get; set; }
         public string MensajeInicial { get; set; }

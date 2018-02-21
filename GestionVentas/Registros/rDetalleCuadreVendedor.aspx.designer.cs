@@ -31,6 +31,24 @@ namespace GestionVentas.Registros {
         protected global::System.Web.UI.WebControls.Button BuscarButton;
         
         /// <summary>
+        /// CuadreIdTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CuadreIdTextBox;
+        
+        /// <summary>
+        /// BuscarCuadreButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BuscarCuadreButton;
+        
+        /// <summary>
         /// VendidoTextBox control.
         /// </summary>
         /// <remarks>
@@ -40,31 +58,31 @@ namespace GestionVentas.Registros {
         protected global::System.Web.UI.WebControls.TextBox VendidoTextBox;
         
         /// <summary>
-        /// SubsidiosTextBox control.
+        /// SubcidioDropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SubsidiosTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList SubcidioDropDownList1;
         
         /// <summary>
-        /// GastoTextBox control.
+        /// GastosDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GastoTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList GastosDropDownList;
         
         /// <summary>
-        /// PagosTextBox control.
+        /// PagosDropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PagosTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList PagosDropDownList2;
         
         /// <summary>
         /// ComisionTextBox control.
@@ -112,13 +130,13 @@ namespace GestionVentas.Registros {
         protected global::System.Web.UI.WebControls.Button AgregarButton;
         
         /// <summary>
-        /// ConsultaClienteGridView control.
+        /// DetalleCuadreGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ConsultaClienteGridView;
+        protected global::System.Web.UI.WebControls.GridView DetalleCuadreGridView;
         
         /// <summary>
         /// LimpiarButton control.
